@@ -8,23 +8,24 @@
 
 Cenário: Adicionar 1 produto ao carrinho 
 Dado que eu esteja na tela de produto
-Quando eu selecionar o tamho "M"
-E a cor "Orange" clicar em "Comprar"
+Quando eu selecionar o <tamanho>, <cor>
+E clicar em "Comprar"
 Então deve adcionar o produto ao carrinho de compras
 
 Cenário: Adicionar 10 produtos ao carrinho
 Dado que eu esteja na tela de produto
-Quando eu selecionar o tamho "S"
-E a cor "Blue" selecionar a quantidade de produtos em "10" clicar em "Comprar"
+Quando eu selecionar o tamanho <tamanho>, <cor> e selecionar a quantidade de produtos em "10" 
+E clicar em "Comprar"
 Então deve adcionar o produto ao carrinho de compras
 
 Cenário: Adicionar 11 produtos ao  carrinho
 Dado que eu esteja na tela de produto
-Quando eu selecionar o tamho "XS"
-E a cor "Red" selecionar a quantidade de produtos em "11" clicar em "Comprar"
+Quando eu selecionar o <tamanho>, <cor> e selecionar a quantidade de produtos em "11" 
+E clicar em "Comprar"
 Então deve exibir a mensagem de alerta "Máximo de produtos excedido"
 
 Cenário: Limpar seleção de produtos
-Quando eu selecionar o tamho "XL"
-E a cor "Red" selecionar a quantidade de produtos em "7" clicar em "Limpar"
-Então deve limpar a seleção de informações selecionadas do produto
+Dado que eu esteja na tela de produtos
+Quando eu selecionar o <tamanho>, <cor>, <quantidade>
+E clicar em "Limpar"
+Então deve limpar a seleção de informações escolhidas do produto
