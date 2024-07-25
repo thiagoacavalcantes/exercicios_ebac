@@ -1,33 +1,32 @@
-Feature: Tela de Login
-    Como cliente da EBAC-SHOP
-    Quero fazer concluir meu cadastro
-    Para finalizar minha compra
+            #language: pt
 
-    Scenario: Usuário não cadastrado
-        When eu digitar o usuário "nãocadastrado@ebac.com"
-        And digitar a senha "Senha@123"
-        And clicar no botão "Login"
-        Then deve exibir uma mensagem de alerta "Usuário não cadastrado"
+            Funcionalidade: Tela de Login
+            Como cliente da EBAC-SHOP
+            Quero fazer concluir meu cadastro
+            Para finalizar minha compra
 
-    Scenario: Senha inválida
-        When eu digitar o usuário "cadastrado@ebac.com"
-        And digitar a senha "Senhainvalida"
-        And clicar no botão "Login"
-        Then deve exibir uma mensagem de alerta "E-mail, usuário ou senha inválidos"
+            Cenário: Usuário não cadastrado
+            Quando eu digitar o usuário "nãocadastrado@ebac.com"
+            E digitar a senha "Senha@123", clicar no botão "Login"
+            Então deve exibir uma mensagem de alerta "Usuário não cadastrado"
 
-    Scenario: Autenticar usuário válido
-        When eu digitar o usuário "cadastrado@ebac.com"
-        And digitar a senha "Senha@123"
-        And clicar no botão "Login"
-        Then deve exibir uma mensagem de boas vindas "Bem vindo João"
+            Cenário: Senha inválida
+            Quando eu digitar o usuário "cadastrado@ebac.com"
+            E digitar a senha "Senhainvalida",  clicar no botão "Login"
+            Então deve exibir uma mensagem de alerta "E-mail, usuário ou senha inválidos"
 
-    Scenario Outline: Autenticar multiplos usuários
-        Quando eu digitar <email>
-        E a <password>
-        Então deve exibir a <mensagem> de boas vindas
+            Cenário: Autenticar usuário válido
+            Quando eu digitar o usuário "cadastrado@ebac.com"
+            E digitar a senha "Senha@123", clicar no botão "Login"
+            Então deve exibir uma mensagem de boas vindas "Bem vindo João"
 
-        Examples:
-            | email                | password  | mensagem            |
+            Esquema do Cenário: Autenticar multiplos usuários
+            Quando eu digitar <e-mail>
+            E a <senha>
+            Então deve exibir a <mensagem> de boas vindas
+
+            Exemplos:
+            | e-mail               | senha     | mensagem            |
             | cadastrado@ebac.com  | Senha@123 | "Bem vindo João"    |
             | cadastrado1@ebac.com | Senha@456 | "Bem vindo Thiago"  |
             | cadastrado2@ebac.com | Senha@789 | "Bem vinda Ana"     |
