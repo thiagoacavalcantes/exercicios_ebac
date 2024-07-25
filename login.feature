@@ -21,8 +21,8 @@
             Então deve exibir uma mensagem de boas vindas "Bem vindo João"
 
             Esquema do Cenário: Autenticar multiplos usuários
-            Quando eu digitar <e-mail>
-            E a <senha>
+            Quando eu digitar <e-mail> <senha>
+            E clicar no botão "Login"
             Então deve exibir a <mensagem> de boas vindas
 
             Exemplos:
