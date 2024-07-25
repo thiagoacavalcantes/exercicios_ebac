@@ -6,17 +6,17 @@
             Para finalizar minha compra
 
             Cenário: Usuário não cadastrado
-            Quando eu digitar o usuário "nãocadastrado@ebac.com", digitar a senha "Senha@123"
+            Quando eu digitar o usuário "nãocadastrado@ebac.com" e digitar a senha "Senha@123"
             E clicar no botão "Login"
             Então deve exibir uma mensagem de alerta "Usuário não cadastrado"
 
             Cenário: Senha inválida
-            Quando eu digitar o usuário "cadastrado@ebac.com",  digitar a senha "Senhainvalida"
+            Quando eu digitar o usuário "cadastrado@ebac.com" e  digitar a senha "Senhainvalida"
             E clicar no botão "Login"
             Então deve exibir uma mensagem de alerta "E-mail, usuário ou senha inválidos"
 
             Cenário: Autenticar usuário válido
-            Quando eu digitar o usuário "cadastrado@ebac.com", digitar a senha "Senha@123" 
+            Quando eu digitar o usuário "cadastrado@ebac.com" e digitar a senha "Senha@123" 
             E clicar no botão "Login"
             Então deve exibir uma mensagem de boas vindas "Bem vindo João"
 
